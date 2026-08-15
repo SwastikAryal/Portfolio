@@ -3,7 +3,7 @@ export const portfolioData = {
   title: 'Front-End Developer & UI Engineer',
   email: 'aryalswastik744@gmail.com',
   location: 'Kathmandu, Nepal',
-  bio: 'I’m a full-stack developer passionate about building practical, user-focused solutions to real-world problems. I work with React, JavaScript, Node.js, PHP, and cloud platforms, and I enjoy creating clean, responsive web applications while continuously learning and collaborating on challenging projects.',
+  bio: 'I’m a Frontend Developer focused on building modern, responsive, and user-friendly web applications. I work primarily with React, JavaScript, and Tailwind CSS, while currently expanding my backend skills with Node.js to grow into a well-rounded full-stack developer.',
 
   social: [
     { name: 'GitHub', href: 'https://github.com/SwastikAryal', icon: 'github' },
@@ -11,7 +11,7 @@ export const portfolioData = {
     { name: 'Email', href: 'mailto:aryalswastik744@gmail.com', icon: 'email' },
   ],
 
-  skills: ['React', 'Next.js', 'JavaScript', 'TypeScript', 'Node.js', 'PHP', 'Tailwind CSS', 'HTML', 'CSS', 'React Router', 'Vite'],
+  skills: ['React', 'JavaScript', 'TypeScript', 'Node.js', 'PHP', 'Tailwind CSS', 'HTML', 'CSS'],
 
   projects: [
     {
