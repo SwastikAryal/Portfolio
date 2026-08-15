@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
 import { SunIcon, MoonIcon } from './Icons'
 
 const navLinks = [
@@ -8,6 +9,22 @@ const navLinks = [
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
 ]
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.08,
+      delayChildren: 0.2,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: -8 },
+  visible: { opacity: 1, y: 0 },
+}
 
 export default function Navbar() {
   const [dark, setDark] = useState(() => {
@@ -26,30 +43,58 @@ export default function Navbar() {
   }, [dark])
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700 z-50">
+    <motion.header
+      initial={{ y: -20, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.4, ease: 'easeOut' }}
+      className="fixed top-0 left-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700 z-50"
+    >
       <nav className="max-w-4xl mx-auto flex items-center justify-between py-4 px-6">
-        <a href="#hero" className="text-lg font-bold text-slate-900 dark:text-slate-100">
-          Swastik Aryal
-        </a>
-        <div className="flex items-center gap-6">
+        <motion.a
+          href="#hero"
+          className="text-lg font-bold text-black dark:text-white"
+          whileHover={{ scale: 1.05 }}
+          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+        >
+          Swastik
+        </motion.a>
+        <motion.div
+          className="flex items-center gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
           {navLinks.map((link) => (
-            <a
+            <motion.a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+              className="relative text-sm font-medium text-slate-600 dark:text-white transition-colors"
+              variants={itemVariants}
+              whileHover={{ scale: 1.1, color: '#6366F1' }}
+              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
             >
               {link.label}
-            </a>
+              <motion.span
+                className="absolute -bottom-1 left-0 h-0.5 bg-accent rounded-full"
+                initial={{ scaleX: 0 }}
+                whileHover={{ scaleX: 1 }}
+                transition={{ duration: 0.2 }}
+                style={{ originX: 0 }}
+              />
+            </motion.a>
           ))}
-          <button
+          <motion.button
             onClick={() => setDark(!dark)}
             className="p-1.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
             aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
+            whileHover={{ scale: 1.1, rotate: 15 }}
+            whileTap={{ scale: 0.9, rotate: -15 }}
+            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
           >
             {dark ? <SunIcon /> : <MoonIcon />}
-          </button>
-        </div>
+          </motion.button>
+        </motion.div>
       </nav>
-    </header>
+    </motion.header>
   )
 }

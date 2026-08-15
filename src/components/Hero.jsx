@@ -21,7 +21,7 @@ export default function Hero() {
             />
           </div>
           <div className="md:w-2/3">
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-slate-100 mb-2">
+            <h1 className="text-4xl md:text-5xl font-bold text-accent-2 mb-2">
               {portfolioData.name}
             </h1>
             <p className="text-xl text-slate-600 dark:text-slate-400 mb-6">

@@ -11,14 +11,14 @@ export default function Contact() {
   return (
     <section id="contact" className="py-20 pt-20">
       <div className="max-w-3xl mx-auto px-6 text-center">
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100 mb-6">
+        <h2 className="text-2xl font-bold text-accent-2 mb-6">
           Get in Touch
         </h2>
         <p className="text-slate-600 dark:text-slate-400 max-w-md mx-auto mb-8">
           Interested in working together or just want to say hello? Reach out —
           I'm open to new opportunities and collaborations.
         </p>
-        <div className="text-slate-900 dark:text-slate-100 font-medium mb-6">
+        <div className="text-accent-2 font-medium mb-6">
           {portfolioData.email}
         </div>
         <div className="flex justify-center gap-4">
