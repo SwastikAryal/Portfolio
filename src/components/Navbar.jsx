@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { SunIcon, MoonIcon } from './Icons'
+import { Sun, Moon } from 'lucide-react'
 
 const navLinks = [
   { label: 'Home', href: '#hero' },
@@ -14,10 +14,10 @@ const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: {
-      staggerChildren: 0.08,
-      delayChildren: 0.2,
-    },
+      transition: {
+        staggerChildren: 0.12,
+        delayChildren: 0.3,
+      },
   },
 }
 
@@ -46,7 +46,7 @@ export default function Navbar() {
     <motion.header
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.4, ease: 'easeOut' }}
+      transition={{ duration: 0.8, ease: 'easeOut' }}
       className="fixed top-0 left-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700 z-50"
     >
       <nav className="max-w-4xl mx-auto flex items-center justify-between py-4 px-6">
@@ -54,7 +54,7 @@ export default function Navbar() {
           href="#hero"
           className="text-lg font-bold text-black dark:text-white"
           whileHover={{ scale: 1.05 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
         >
           Swastik
         </motion.a>
@@ -71,14 +71,14 @@ export default function Navbar() {
               className="relative text-sm font-medium text-slate-600 dark:text-white transition-colors"
               variants={itemVariants}
               whileHover={{ scale: 1.1, color: '#6366F1' }}
-              transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
             >
               {link.label}
               <motion.span
                 className="absolute -bottom-1 left-0 h-0.5 bg-accent rounded-full"
                 initial={{ scaleX: 0 }}
                 whileHover={{ scaleX: 1 }}
-                transition={{ duration: 0.2 }}
+                transition={{ duration: 0.4 }}
                 style={{ originX: 0 }}
               />
             </motion.a>
@@ -89,9 +89,9 @@ export default function Navbar() {
             aria-label={dark ? 'Switch to light mode' : 'Switch to dark mode'}
             whileHover={{ scale: 1.1, rotate: 15 }}
             whileTap={{ scale: 0.9, rotate: -15 }}
-            transition={{ type: 'spring', stiffness: 400, damping: 17 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
           >
-            {dark ? <SunIcon /> : <MoonIcon />}
+            {dark ? <Sun size={20} /> : <Moon size={20} />}
           </motion.button>
         </motion.div>
       </nav>

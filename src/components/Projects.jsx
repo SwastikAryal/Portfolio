@@ -17,22 +17,22 @@ export default function Projects() {
             return (
               <motion.article
                 key={project.title}
-                className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg dark:hover:shadow-white/20 hover:border-accent dark:hover:border-accent transition-all duration-200 ease-out"
+                className="group bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-xl overflow-hidden shadow-sm hover:shadow-lg dark:hover:shadow-white/20 hover:border-accent dark:hover:border-accent transition-all duration-200 ease-out"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
-              >
-                <div className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6`}>
-                  <div className="lg:w-1/2">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-56 object-cover rounded-lg bg-slate-200 dark:bg-slate-700"
-                    />
-                  </div>
-                  <div className="lg:w-1/2 space-y-4 p-6">
+                 transition={{ duration: 0.8, delay: index * 0.15, type: 'spring', stiffness: 300, damping: 20 }}
+                 whileHover={{ y: -6 }}
+               >
+                 <div                  className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6`}>
+                   <div className="lg:w-1/2 relative">
+                     <img
+                       src={project.image}
+                       alt={project.title}
+                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                     />
+                   </div>
+                   <div className="lg:w-1/2 space-y-4 p-6">
                     <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">
                       {project.title}
                     </h3>
@@ -55,7 +55,7 @@ export default function Projects() {
                           href={project.links.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-accent transition-colors"
+                          className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-900 dark:text-white hover:text-accent transition-colors"
                         >
                           <ExternalIcon className="w-4 h-4" />
                           Live Demo
@@ -66,7 +66,7 @@ export default function Projects() {
                           href={project.links.github}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-accent transition-colors"
+                          className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-900 dark:text-white hover:text-accent transition-colors"
                         >
                           <GitHubIcon className="w-4 h-4" />
                           Source

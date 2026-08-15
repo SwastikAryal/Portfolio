@@ -14,19 +14,23 @@ export const portfolioData = {
   skills: [
     {
       category: 'Frontend',
+      description: 'Building responsive, interactive, and user-friendly interfaces.',
       items: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS'],
     },
     {
       category: 'Backend',
+      description: 'Developing application logic and connecting frontend systems.',
       items: ['Node.js', 'Express', 'PHP', 'JSON'],
     },
     {
       category: 'Database',
+      description: 'Designing and managing structured data for web applications.',
       items: ['MySQL', 'SQL Queries', 'MongoDB'],
     },
     {
       category: 'Tools',
-      items: ['Git', 'GitHub', 'Vite', 'Vercel',  'Render', 'Prisma'],
+      description: 'Using modern tools to build, manage, and deploy projects.',
+      items: ['Git', 'GitHub', 'Vite', 'Vercel', 'Render', 'Prisma'],
     },
   ],
 
@@ -55,8 +59,8 @@ export const portfolioData = {
 
     {
       title: 'CoFound',
-      description: 'AI-powered co-founder matching platform that connects entrepreneurs using a 7-dimensional compatibility scoring algorithm. Includes JWT-based auth with NextAuth.js, role-specific onboarding, public profiles, Cloudinary image uploads, and a professional matching dashboard.',
-      tech: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS 4', 'NextAuth.js', 'Prisma', 'MongoDB Atlas'],
+      description: 'AI-powered co-founder matching platform that connects entrepreneurs using a 7-dimensional compatibility scoring algorithm. Includes JWT-based auth with NextAuth.js, role-specific onboarding, public profiles, and a professional matching dashboard.',
+      tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS', 'NextAuth.js', 'Prisma', 'MongoDB Atlas'],
       image: 'cofound.svg',
       links: {
         live: 'https://hal-82-quads.vercel.app/',
