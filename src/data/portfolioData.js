@@ -31,7 +31,7 @@ export const portfolioData = {
       title: 'ShopSwift',
       description: 'Full-stack e-commerce platform featuring product browsing, cart management, checkout flows, user authentication, and payment integration. Built with a React + Vite frontend and a Node.js/Express REST API backed by Sequelize ORM.',
       tech: ['React 19', 'Vite', 'Node.js', 'Vitest'],
-      image: '/placeholder-project.svg',
+      image: 'shopswift.svg',
       links: {
         live: 'https://shopswift-oycj.onrender.com/',
         github: 'https://github.com/SwastikAryal/ShopSwift',
@@ -42,7 +42,7 @@ export const portfolioData = {
       title: 'FootyKit',
       description: 'Responsive football kit e-commerce website showcasing club merchandise with product listings, a cart system, and an auth flow. Built with vanilla HTML, CSS, and JavaScript plus PHP for server-side authentication and cart handling.',
       tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Vercel'],
-      image: '/placeholder-project.svg',
+      image: 'footykit.svg',
       links: {
         live: 'https://footy-kit.vercel.app/',
         github: 'https://github.com/SwastikAryal/FootyKit',
@@ -53,7 +53,7 @@ export const portfolioData = {
       title: 'CoFound',
       description: 'AI-powered co-founder matching platform that connects entrepreneurs using a 7-dimensional compatibility scoring algorithm. Includes JWT-based auth with NextAuth.js, role-specific onboarding, public profiles, Cloudinary image uploads, and a professional matching dashboard.',
       tech: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS 4', 'NextAuth.js', 'Prisma', 'MongoDB Atlas'],
-      image: '/placeholder-project.svg',
+      image: 'cofound.svg',
       links: {
         live: 'https://hal-82-quads.vercel.app/',
         github: 'https://github.com/SwastikAryal/CoFound',

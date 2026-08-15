@@ -1,5 +1,5 @@
 import { portfolioData } from '../data/portfolioData'
-import { ExternalIcon, DownloadIcon } from './Icons'
+import { GitHubIcon, ExternalIcon } from './Icons'
 
 export default function Projects() {
   return (
@@ -49,7 +49,7 @@ export default function Projects() {
                         href={project.links.live}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 dark:text-slate-300"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-accent transition-colors"
                       >
                         <ExternalIcon className="w-4 h-4" />
                         Live Demo
@@ -60,9 +60,9 @@ export default function Projects() {
                         href={project.links.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 dark:text-slate-300"
+                        className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-700 dark:text-slate-300 hover:text-accent transition-colors"
                       >
-                        <DownloadIcon className="w-4 h-4" />
+                        <GitHubIcon className="w-4 h-4" />
                         Source
                       </a>
                     )}
