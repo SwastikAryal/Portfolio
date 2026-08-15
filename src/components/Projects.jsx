@@ -26,11 +26,12 @@ export default function Projects() {
                >
                  <div                  className={`flex flex-col ${isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-6`}>
                    <div className="lg:w-1/2 relative">
-                     <img
-                       src={project.image}
-                       alt={project.title}
-                       className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
-                     />
+                      <img
+                        src={project.image}
+                        alt={project.title}
+                        loading="lazy"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105"
+                      />
                    </div>
                    <div className="lg:w-1/2 space-y-4 p-6">
                     <h3 className="text-xl font-bold text-slate-900 dark:text-slate-100">

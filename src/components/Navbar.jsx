@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Sun, Moon, Menu, X } from 'lucide-react'
+import { portfolioData } from '../data/portfolioData'
 
 const navLinks = [
   { label: 'Home', href: '#hero' },
@@ -8,7 +9,7 @@ const navLinks = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
-  { label: 'Resume', href: '/Swastik_Aryal_Resume.pdf', external: true },
+  { label: 'Resume', href: portfolioData.resume, external: true },
 ]
 
 const containerVariants = {

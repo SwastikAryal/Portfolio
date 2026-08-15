@@ -1,6 +1,6 @@
 export const portfolioData = {
   name: 'Swastik Aryal',
-  title: 'Front-End Developer & UI Engineer',
+  title: 'Front-End Developer & UI/UX Engineer',
   email: 'aryalswastik744@gmail.com',
   location: 'Kathmandu, Nepal',
   bio: 'I’m a Frontend Developer focused on building modern, responsive, and user-friendly web applications. I work primarily with React, JavaScript, and Tailwind CSS, while currently expanding my backend skills with Node.js to grow into a well-rounded full-stack developer.',
@@ -10,6 +10,8 @@ export const portfolioData = {
     { name: 'LinkedIn', href: 'https://www.linkedin.com/in/swastik-aryal/', icon: 'linkedin' },
     { name: 'Email', href: 'mailto:aryalswastik744@gmail.com', icon: 'email' },
   ],
+
+  resume: '/Swastik_Aryal_Resume.pdf',
 
   skills: [
     {

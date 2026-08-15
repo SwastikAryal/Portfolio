@@ -35,6 +35,7 @@ export default function About() {
               <img
                 src={aboutImg}
                 alt="About"
+                loading="lazy"
                 className="w-full h-32 object-cover rounded-lg mb-6"
               />
               <div className="mb-6">

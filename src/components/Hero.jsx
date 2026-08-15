@@ -17,6 +17,7 @@ export default function Hero() {
             <img
               src={heroImg}
               alt={portfolioData.name}
+              fetchpriority="high"
               className="w-48 h-48 rounded-full object-cover ring-4 ring-slate-200 dark:ring-slate-700"
             />
           </div>
