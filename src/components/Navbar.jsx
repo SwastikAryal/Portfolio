@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Skills', href: '#skills' },
   { label: 'Projects', href: '#projects' },
   { label: 'Contact', href: '#contact' },
+  { label: 'Resume', href: '/Swastik_Aryal_Resume.pdf', external: true },
 ]
 
 const containerVariants = {
@@ -88,37 +89,61 @@ export default function Navbar() {
       className="fixed top-0 left-0 w-full bg-white/80 dark:bg-slate-900/80 backdrop-blur border-b border-slate-200 dark:border-slate-700 z-50"
     >
       <nav className="max-w-4xl mx-auto flex items-center justify-between py-4 px-6">
-        <motion.a
-          href="#hero"
-          className="text-lg font-bold text-black dark:text-white"
-          whileHover={{ scale: 1.05 }}
-          transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-          onClick={() => setMobileOpen(false)}
-        >
-          Swastik
-        </motion.a>
+        <a href="/">
+          <motion.a
+            className="text-lg font-bold text-black dark:text-white"
+            whileHover={{ scale: 1.05 }}
+            transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            onClick={() => setMobileOpen(false)}
+          >
+            Swastik
+          </motion.a>
+        </a>
 
         <div className="flex items-center gap-4">
           <div className="hidden md:flex items-center gap-6">
-            {navLinks.map((link) => (
-              <motion.a
-                key={link.label}
-                href={link.href}
-                className="relative text-sm font-medium text-slate-600 dark:text-slate-300"
-                variants={itemVariants}
-                whileHover={{ scale: 1.1, color: '#6366F1' }}
-                transition={{ type: 'spring', stiffness: 300, damping: 20 }}
-              >
-                {link.label}
-                <motion.span
-                  className="absolute -bottom-1 left-0 h-0.5 bg-accent rounded-full"
-                  initial={{ scaleX: 0 }}
-                  whileHover={{ scaleX: 1 }}
-                  transition={{ duration: 0.4 }}
-                  style={{ originX: 0 }}
-                />
-              </motion.a>
-            ))}
+            {navLinks.map((link) => {
+              if (link.external) {
+                return (
+                  <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">
+                    <motion.a
+                      className="relative text-sm font-medium text-slate-600 dark:text-slate-300"
+                      variants={itemVariants}
+                      whileHover={{ scale: 1.1, color: '#6366F1' }}
+                      transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                    >
+                      {link.label}
+                      <motion.span
+                        className="absolute -bottom-1 left-0 h-0.5 bg-accent rounded-full"
+                        initial={{ scaleX: 0 }}
+                        whileHover={{ scaleX: 1 }}
+                        transition={{ duration: 0.4 }}
+                        style={{ originX: 0 }}
+                      />
+                    </motion.a>
+                  </a>
+                )
+              }
+              return (
+                <a key={link.label} href={link.href}>
+                  <motion.a
+                    className="relative text-sm font-medium text-slate-600 dark:text-slate-300"
+                    variants={itemVariants}
+                    whileHover={{ scale: 1.1, color: '#6366F1' }}
+                    transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+                  >
+                    {link.label}
+                    <motion.span
+                      className="absolute -bottom-1 left-0 h-0.5 bg-accent rounded-full"
+                      initial={{ scaleX: 0 }}
+                      whileHover={{ scaleX: 1 }}
+                      transition={{ duration: 0.4 }}
+                      style={{ originX: 0 }}
+                    />
+                  </motion.a>
+                </a>
+              )
+            })}
             <motion.button
               onClick={() => setDark(!dark)}
               className="p-1.5 rounded-lg text-slate-700 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
@@ -162,19 +187,36 @@ export default function Navbar() {
             className="md:hidden border-t border-slate-200 dark:border-slate-700 bg-white/95 dark:bg-slate-900/95 backdrop-blur overflow-hidden"
           >
             <div className="px-6 py-4 space-y-3">
-              {navLinks.map((link, index) => (
-                <motion.a
-                  key={link.label}
-                  href={link.href}
-                  className="block text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-accent transition-colors py-2"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.05 }}
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </motion.a>
-              ))}
+              {navLinks.map((link, index) => {
+                if (link.external) {
+                  return (
+                    <a key={link.label} href={link.href} target="_blank" rel="noopener noreferrer">
+                      <motion.a
+                        className="block text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-accent transition-colors py-2"
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                        onClick={() => setMobileOpen(false)}
+                      >
+                        {link.label}
+                      </motion.a>
+                    </a>
+                  )
+                }
+                return (
+                  <a key={link.label} href={link.href}>
+                    <motion.a
+                      className="block text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-accent dark:hover:text-accent transition-colors py-2"
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                      onClick={() => setMobileOpen(false)}
+                    >
+                      {link.label}
+                    </motion.a>
+                  </a>
+                )
+              })}
             </div>
           </motion.div>
         )}
