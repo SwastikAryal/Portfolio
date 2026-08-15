@@ -5,7 +5,7 @@ import { motion } from 'framer-motion'
 
 export default function Projects() {
   return (
-    <Reveal id="projects" className="py-20 pt-20">
+    <Reveal id="projects" className="py-20">
       <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-2xl font-bold text-accent-2 mb-12 text-center">
           Projects
@@ -55,7 +55,7 @@ export default function Projects() {
                           href={project.links.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1.5 text-sm font-medium text-slate-900 dark:text-white hover:text-accent transition-colors"
+                          className="inline-flex items-center gap-1.5 text-sm font-medium bg-slate-900 text-white dark:bg-white dark:text-slate-900 px-4 py-2 rounded-full hover:bg-indigo-600 dark:hover:bg-indigo-400 transition-colors"
                         >
                           <ExternalIcon className="w-4 h-4" />
                           Live Demo

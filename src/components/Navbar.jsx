@@ -29,6 +29,10 @@ const itemVariants = {
 export default function Navbar() {
   const [dark, setDark] = useState(() => {
     if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('theme')
+      if (saved !== null) {
+        return saved === 'dark'
+      }
       return window.matchMedia('(prefers-color-scheme: dark)').matches
     }
     return false
@@ -40,6 +44,7 @@ export default function Navbar() {
     } else {
       document.documentElement.classList.remove('dark')
     }
+    localStorage.setItem('theme', dark ? 'dark' : 'light')
   }, [dark])
 
   return (
@@ -68,7 +73,7 @@ export default function Navbar() {
             <motion.a
               key={link.label}
               href={link.href}
-              className="relative text-sm font-medium text-slate-600 dark:text-white transition-colors"
+              className="relative text-sm font-medium text-slate-600 dark:text-slate-300"
               variants={itemVariants}
               whileHover={{ scale: 1.1, color: '#6366F1' }}
               transition={{ type: 'spring', stiffness: 300, damping: 20 }}
