@@ -11,7 +11,7 @@ const iconMap = {
 export default function Contact() {
   return (
     <Reveal id="contact" className="py-20">
-      <div className="max-w-3xl mx-auto px-6 text-center">
+      <div className="max-w-4xl mx-auto px-6 text-center">
         <h2 className="text-2xl font-bold text-accent-2 mb-6">
           Get in Touch
         </h2>

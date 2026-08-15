@@ -4,7 +4,7 @@ import aboutImg from '../assets/about.png'
 export default function About() {
   return (
     <Reveal id="about" className="py-20">
-      <div className="max-w-5xl mx-auto px-6">
+      <div className="max-w-4xl mx-auto px-6">
         <h2 className="text-2xl font-bold text-accent-2 mb-12 text-center">
           About
         </h2>
@@ -35,7 +35,7 @@ export default function About() {
               <img
                 src={aboutImg}
                 alt="About"
-                className="w-80 h-35 object-cover rounded-lg mb-6"
+                className="w-full h-32 object-cover rounded-lg mb-6"
               />
               <div className="mb-6">
                 <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 mb-2">
