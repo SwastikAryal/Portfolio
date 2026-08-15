@@ -1,5 +1,6 @@
 import { portfolioData } from '../data/portfolioData'
 import { GitHubIcon, LinkedInIcon, EmailIcon } from './Icons'
+import Reveal from './Reveal'
 
 const iconMap = {
   github: GitHubIcon,
@@ -9,7 +10,7 @@ const iconMap = {
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-20 pt-20">
+    <Reveal id="contact" className="py-20 pt-20">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-2xl font-bold text-accent-2 mb-6">
           Get in Touch
@@ -42,6 +43,6 @@ export default function Contact() {
           © {new Date().getFullYear()} {portfolioData.name}. All rights reserved.
         </p>
       </div>
-    </section>
+    </Reveal>
   )
 }

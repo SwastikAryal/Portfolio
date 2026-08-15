@@ -1,6 +1,8 @@
+import Reveal from './Reveal'
+
 export default function About() {
   return (
-    <section id="about" className="py-20 pt-20">
+    <Reveal id="about" className="py-20 pt-20">
       <div className="max-w-3xl mx-auto px-6 text-center">
         <h2 className="text-2xl font-bold text-accent-2 mb-8">
           About
@@ -25,6 +27,6 @@ export default function About() {
           </p>
         </div>
       </div>
-    </section>
+    </Reveal>
   )
 }

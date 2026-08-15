@@ -14,15 +14,19 @@ export const portfolioData = {
   skills: [
     {
       category: 'Frontend',
-      items: ['React', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS', 'JavaScript'],
+      items: ['React', 'JavaScript', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS'],
     },
     {
       category: 'Backend',
-      items: ['Node.js', 'Express', 'PHP'],
+      items: ['Node.js', 'Express', 'PHP', 'JSON'],
+    },
+    {
+      category: 'Database',
+      items: ['MySQL', 'SQL Queries', 'MongoDB'],
     },
     {
       category: 'Tools',
-      items: ['Git', 'Vite', 'Vercel', 'Prisma'],
+      items: ['Git', 'GitHub', 'Vite', 'Vercel',  'Render', 'Prisma'],
     },
   ],
 
