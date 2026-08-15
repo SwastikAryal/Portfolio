@@ -11,7 +11,20 @@ export const portfolioData = {
     { name: 'Email', href: 'mailto:aryalswastik744@gmail.com', icon: 'email' },
   ],
 
-  skills: ['React', 'JavaScript', 'TypeScript', 'Node.js', 'PHP', 'Tailwind CSS', 'HTML', 'CSS'],
+  skills: [
+    {
+      category: 'Frontend',
+      items: ['React', 'TypeScript', 'Tailwind CSS', 'HTML', 'CSS', 'JavaScript'],
+    },
+    {
+      category: 'Backend',
+      items: ['Node.js', 'Express', 'PHP'],
+    },
+    {
+      category: 'Tools',
+      items: ['Git', 'Vite', 'Vercel', 'Prisma'],
+    },
+  ],
 
   projects: [
     {
