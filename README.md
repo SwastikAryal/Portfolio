@@ -1,131 +1,239 @@
-# Portfolio — Swastik Aryal
+# Portfolio - Swastik Aryal
 
-A clean, single-page personal portfolio built with React and Vite to showcase projects, skills, and contact information.
+A modern single-page portfolio website built with **React and Vite**. The project showcases a clean interface for presenting projects, technical skills, an about section, resume, and a functional contact form.
 
-Live demo: https://portfolio-pi-henna-93kogb360p.vercel.app
+🌐 **Live Demo:** https://aryalswastikcom.np
 
-Table of contents
+---
 
-- About
-- Demo
-- Repository layout
-- Features
-- Tech stack
-- Environment variables
-- Install & run
-- Project structure
-- Deployment
-- Contributing
-- Credits & acknowledgements
-- License & contact
+## Overview
 
-About
+This repository contains the source code for a personal developer portfolio.
 
-This repository contains the source code for my personal portfolio website. The site is intentionally simple, mobile-first, and easy to customize — replace images, copy, and project entries to reflect your work.
+The application is built as a single-page website with reusable React components and separate sections for the homepage, about information, skills, projects, and contact.
 
-Demo
+The project also includes theme support, interactive UI elements, EmailJS integration for the contact form, and Vercel deployment.
 
-Live demo: https://portfolio-pi-henna-93kogb360p.vercel.app
+---
 
-Repository layout
+## Features
 
-- public/            — static assets (favicon, images)
-- src/               — source files
-  - assets/          — images, avatar, project screenshots
-  - components/      — Header, Footer, ProjectCard, Contact, etc.
-  - sections/        — Home, About, Projects, Skills, Contact
-  - App.jsx, main.jsx
-- index.html
-- package.json
-- README.md
+* Single-page portfolio layout
+* React component-based architecture
+* Vite development and build setup
+* Light and dark theme support
+* Interactive skills section
+* Project showcase
+* About section
+* Contact form with EmailJS
+* Resume download
+* Smooth UI transitions and animations
+* Reusable components
+* Vercel deployment
+* Environment variable support
 
-Features
+---
 
-- Clean single-page layout with anchor navigation
-- Mobile-first, responsive design
-- Sections for About, Projects, Skills, and Contact
-- Easy to extend (add pages, projects, or integrations)
+## Tech Stack
 
-Tech stack
+| Technology   | Purpose                       |
+| ------------ | ----------------------------- |
+| React        | UI development                |
+| JavaScript   | Application logic             |
+| Vite         | Development and build tooling |
+| Tailwind CSS | Styling                       |
+| EmailJS      | Contact form email delivery   |
+| Git          | Version control               |
+| GitHub       | Source code management        |
+| Vercel       | Deployment                    |
 
-- JavaScript (React)
-- Vite (build tool)
-- HTML & CSS (plain CSS by default; can be swapped for Tailwind/SCSS)
+---
 
-Environment variables
+## Project Structure
 
-This is a static portfolio and does not require secrets by default. If you add analytics, form backends, or other third-party services, store secrets in a `.env` file and never commit them. Example (only if needed):
+```text
+portfolio/
+├── public/
+│   ├── images/
+│   ├── Swastik_Aryal_Resume.pdf
+│   └── ...
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── sections/
+│   │   ├── Home/
+│   │   ├── About/
+│   │   ├── Skills/
+│   │   ├── Projects/
+│   │   └── Contact/
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── ...
+│
+├── .env
+├── .gitignore
+├── index.html
+├── package.json
+├── vite.config.js
+└── README.md
+```
 
-- VITE_ANALYTICS_ID=your_analytics_id
-- CONTACT_API_URL=https://api.example.com/contact
+---
 
-Install & run
+## Getting Started
 
-Prerequisites
+### Prerequisites
 
-- Node.js v16+ (recommended)
-- npm (or yarn)
+Make sure the following are installed:
 
-Local development
+* Node.js
+* npm
+* Git
+
+### Installation
+
+Clone the repository:
 
 ```bash
-# install dependencies
+git clone https://github.com/SwastikAryal/portfolio.git
+```
+
+Navigate to the project:
+
+```bash
+cd portfolio
+```
+
+Install dependencies:
+
+```bash
 npm install
+```
 
-# run development server
+---
+
+## Development
+
+Start the development server:
+
+```bash
 npm run dev
+```
 
-# build for production
+Vite will provide a local development URL in the terminal.
+
+---
+
+## Production Build
+
+Create a production build:
+
+```bash
 npm run build
+```
 
-# preview production build
+Preview the production build locally:
+
+```bash
 npm run preview
 ```
 
-Project structure (brief)
+---
 
-- index.html — HTML template and root element
-- src/main.jsx — React entry point, renders the App
-- src/App.jsx — app layout and section wiring
-- src/components — reusable components (Header, Footer, ProjectCard, etc.)
-- src/sections — content sections (Home, About, Projects, Skills, Contact)
-- public/ — static files (images, favicon)
+## Environment Variables
 
-Deployment
+The contact form uses EmailJS for sending messages.
 
-This site is optimized for static hosting. Recommended providers:
+Create a `.env` file in the project root:
 
-- Vercel — seamless for Vite + React (recommended)
-- Netlify — Git-based deployments
-- GitHub Pages — use `gh-pages` or a GitHub Actions workflow
+```env
+VITE_EMAILJS_SERVICE_ID=your_service_id
+VITE_EMAILJS_TEMPLATE_ID=your_template_id
+VITE_EMAILJS_PUBLIC_KEY=your_public_key
+```
 
-Typical Vercel steps
+These variables are required for the contact form to function correctly.
 
-1. Connect the repository to Vercel
-2. Set the build command: `npm run build`
-3. Set the output directory to `dist` (Vite default)
-4. Add any environment variables in the Vercel dashboard
+### Important
 
-Contributing
+Do not commit `.env` files containing sensitive configuration to the repository.
 
-This repository is primarily my personal site. If you want to suggest changes:
+For Vercel deployment, add the same environment variables through:
 
-1. Open an issue describing the change
-2. Fork the repo and create a feature branch: `git checkout -b feat/your-change`
-3. Make changes, run locally, and open a pull request with a clear description
+**Vercel → Project → Settings → Environment Variables**
 
-Credits & acknowledgements
+---
 
-- Built by Swastik Aryal.
-- Uses third-party tools and libraries (React, Vite). See package.json for dependency details.
+## Contact Form
 
-License & contact
+The contact section uses EmailJS to send messages submitted through the website.
 
-- License: Add a LICENSE file if you want to publish under an open-source license (MIT recommended).
-- Contact / source: https://github.com/SwastikAryal
-- Live portfolio: https://portfolio-pi-henna-93kogb360p.vercel.app
+The form collects:
 
-Notes
+* Name
+* Email
+* Subject
+* Message
 
-- I removed other featured-project listings from this README as requested. If you want a concise "Featured projects" section, provide the titles, one-line descriptions, and demo/repo links and I will add them.
-- If you'd like, I can create the project file structure with example components and placeholder assets — reply "create structure" and confirm JS/TS, CSS approach, and package manager.
+The submitted information is passed to the configured EmailJS template and delivered to the configured email address.
+
+---
+
+## Deployment
+
+The project is configured for deployment on **Vercel**.
+
+### Vercel Deployment
+
+1. Push the repository to GitHub.
+2. Import the repository into Vercel.
+3. Vercel detects the Vite project automatically.
+4. Add the required environment variables.
+5. Deploy the project.
+
+### Build Configuration
+
+```text
+Framework: Vite
+Build Command: npm run build
+Output Directory: dist
+```
+
+---
+
+## Customization
+
+The portfolio can be customized by modifying:
+
+* Project information
+* Skills
+* About content
+* Images and assets
+* Theme colors
+* Contact information
+* Resume
+* Navigation items
+
+Most content and UI sections are organized into reusable React components for easier maintenance.
+
+---
+
+## License
+
+This project is a personal portfolio website.
+
+The source code is available for reference and learning purposes. Please avoid directly copying personal content, images, branding, or other original assets.
+
+---
+
+## Credits
+
+Built with:
+
+* React
+* Vite
+* Tailwind CSS
+* EmailJS
+* Vercel
