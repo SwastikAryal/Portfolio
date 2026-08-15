@@ -1,18 +1,24 @@
 # Portfolio — Swastik Aryal
 
-A personal portfolio website built with React and Vite to showcase projects, skills, and contact information.
+A responsive personal portfolio website built with React and Vite. It showcases selected projects, skills, and contact information — with a clean, modern single-page layout.
 
-Live demo: [Add your live site URL here]
+Live demo: https://portfolio-pi-henna-93kogb360p.vercel.app
 
-Screenshots
+Demo screenshots
 
-- Add screenshots or a short GIF of the site here to show the layout and design.
+- Add screenshots or a short GIF of the site in `public/` and replace the placeholders below.
 
-Features
+Highlights / Featured projects
 
-- Responsive, single-page portfolio built with modern frontend tooling
-- Sections for About, Projects, Skills, and Contact
-- Easy to customize and extend
+- CoFound — Hackathon project (Hack-A-Lite 3.0). Live demo: https://hal-82-quads.vercel.app — A collaboration-focused app built during a hackathon.
+- FootyKit — Responsive, customizable football kit e-commerce site. Live demo: https://footy-kit.vercel.app — Built with HTML/CSS/JS and designed for product showcase and checkout flows.
+- ShopSwift — E-commerce platform built with React. Live demo: https://shopswift-oycj.onrender.com — A full storefront demo to demonstrate frontend + product pages.
+
+If you'd like different projects highlighted, list the repos (title + short description) and I’ll update this section.
+
+Why this project
+
+This repository holds the code for my personal portfolio site — a place to present projects, skills, and ways to contact me. It’s designed to be easily customizable and deployable to static hosts like Vercel or Netlify.
 
 Tech stack
 
@@ -20,82 +26,81 @@ Tech stack
 - Vite (build tool)
 - HTML & CSS
 
-Getting started
+Features
 
-These instructions will get a local copy of the project up and running on your machine for development and testing purposes.
+- Mobile-first, responsive layout
+- Sections: About, Projects, Skills, Contact
+- Easy to extend with additional projects and sections
+
+Quick start
 
 Prerequisites
 
 - Node.js (v16+ recommended)
-- npm or yarn
+- npm (or yarn)
 
-Install dependencies
+Install and run locally
 
 ```bash
-# using npm
+# install dependencies
 npm install
 
-# or using yarn
-# yarn
-```
-
-Run the development server
-
-```bash
+# run development server
 npm run dev
-```
 
-Build for production
-
-```bash
+# build for production
 npm run build
-# preview the production build locally
+
+# preview production build locally
 npm run preview
 ```
 
-Project structure (typical)
+Project structure (generated/suggested)
 
-- public/ — static assets
-- src/ — source code
-  - main.jsx — app entry
-  - App.jsx — root component
-  - components/ — shared components
-  - pages/ or sections/ — portfolio sections
+- public/ — static assets (favicon, images)
+- src/
+  - assets/ — images, avatar, project screenshots
+  - components/ — Header, Footer, ProjectCard, Contact
+  - sections/ — Home, About, Projects, Skills, Contact
+  - App.jsx, main.jsx
 - index.html
 - package.json
 
-Customizing
+Customization ideas
 
-- Replace the avatar, project images, and copy in the About/Projects sections.
-- Update package.json scripts or add frameworks (Tailwind, Styled Components, etc.) as desired.
+- Replace the avatar, screenshots, and copy with your own content in `src/assets` and the sections.
+- Add Tailwind, SCSS, or a component library (MUI, Chakra, etc.) if you prefer.
+- Add animations with Framer Motion for polished interactions.
 
 Deployment
 
-This site can be deployed to most static hosting providers. Common options:
+This site is ready for static hosting. Recommended providers:
 
-- Vercel — zero-config for Vite + React
-- Netlify — drag-and-drop or Git integration
-- GitHub Pages — use `gh-pages` or GitHub Actions to deploy the build
+- Vercel — seamless for Vite + React (used for current demo)
+- Netlify — drag-and-drop deploy or Git integration
+- GitHub Pages — use `gh-pages` or a GitHub Actions workflow
 
 Contributing
 
-Contributions are welcome. To propose changes:
+Contributions and suggestions are welcome. To propose changes:
 
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/name`)
-3. Make your changes and run the app locally to verify
+1. Fork the repo
+2. Create a branch: `git checkout -b feature/your-feature`
+3. Make your changes and test locally
 4. Open a pull request describing the change
-
-License
-
-See LICENSE (if present) or add a license file to specify terms.
 
 Contact
 
 - GitHub: https://github.com/SwastikAryal
-- Email: Add your email here
+- Live portfolio: https://portfolio-pi-henna-93kogb360p.vercel.app
 
-Notes
+Notes / To do (you can ask me to do these)
 
-- Replace placeholder links, screenshots, and contact information with your actual data.
-- If you want, tell me which images, demo URL, and technologies (Tailwind, Framer Motion, etc.) you'd like to highlight — I can update the README to include exact screenshots, badges, and a live demo link.
+- Add screenshots or a walkthrough GIF to the README and `public/`.
+- Add project-level badges and links to specific project repositories.
+- Add a LICENSE file (MIT recommended) and a CODE_OF_CONDUCT if you plan to accept contributions.
+- If you want, I can create the project file structure, add example sections and components, and include placeholder assets.
+
+---
+
+README generated/updated by GitHub Copilot on request. Replace any placeholder content (links, images, and descriptions) with your preferred text and assets.
